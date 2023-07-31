@@ -1,16 +1,27 @@
-#Elabore um programa que leia quatro valores inteiros 
-# (variáveis A, B, C e D). Ao final, o programa deve 
-# apresentar o resultado do produto (variável P) 
-# do primeiro com o terceiro valor, e o resultado 
-# da soma (variável S) do segundo com o quarto valor.
+#Escreva um programa que crie um dicionário com o nome e 
+#a idade de três pessoas. Em seguida, solicite ao usuário 
+#um nome e exiba a idade correspondente.
 
-c = input("Digite o valor de C: ")
-d = int(input("Digite o valor de D: "))
-e = int(input("Digite o valor de E: "))
-f = int(input("Digite o valor de F: "))
+def obter_nome_idade(): 
+    cadastro = [
+        {"nome": "Gabriella", "idade": 19},        
+        {"nome": "Gabriele", "idade": 24},
+        {"nome": "Isabella", "idade": 24}
+    ]
+    return cadastro
 
-P = c * e
-S = d + f
+def consultar_nome_idade():
+    cadastro = obter_nome_idade()
+    consulta = input("Digite um nome para consulta de idade no dicionário: ")
+    for pessoa in cadastro: 
+        if pessoa ["nome"] == consulta: 
+            return pessoa["idade"]
+    
+    return "Nome não encontrado. Digite um nome novamente."
 
-print(f"Produto de C e E é: {P}")
-print(f"A soma de D e F é: {S}")
+def resultado():
+    idade = consultar_nome_idade()
+    print(f"A pessoa informada tem {idade} anos.")
+
+resultado()
+
