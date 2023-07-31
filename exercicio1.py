@@ -1,36 +1,22 @@
-#1. Crie um programa que solicite ao usuário uma lista de 
-#números inteiros e retorne a soma de todos os elementos da lista.
+#1. Escreva um programa que solicite um número 
+#ao usuário e verifique se ele é par ou ímpar.
 
-#Para obtermos a lista de números inteiros usamos esta função,
-#a variavel números solicita que o usúario digite uma lista de números
-#separados por espaço e é lida como uma string. O código 
-#lista = [int(numero) for numero in numeros.split()] usa uma list comprehension
-#para criar uma lista de números inteiros. A string é dividida em substrings usando
-#o método split() que é um separador. Cada substring é convertida em um número
-#inteiro (int(numero)) e os mesmos são armazenados la 'lista'.
+#Solicito que o usuário informe um número de sua escolha:
 
-def obter_lista_numeros():
+numero = int(input("Digite um número: "))
 
-    numeros= input("Digite uma lista de números separados por espaço:")
-    lista= [int(numero) for numero in numeros.split()]
-    return lista
+#Faço o controle, o operador % retorna o resto da divisão entre dois números. 
+#O código numero % 2 == 0 verifica se o resto da divisão do número por 2 é igual a zero,
+#o que indica que o número é par, e uma mensagem será exibida confirmando a informação.
+#Fora deste padrão, o número informado será ímpar e será eibida uma mensagem confirmando
+#a informação.
 
-#A função def calcular soma recebe uma lista de núemros inteiros e calcula
-#a soma de todos os elementos da lista usando a função 'sum()'do Python.
+if numero % 2 == 0:
+    print("Par")
 
-def calcular_soma(lista):
-    soma = sum(lista)
-    return soma
+else:
+    print("Ímpar")
 
-#A função def resultado chama as funçoes obter_lista_numero() e calcular_soma()
-#para obter a ista de números do usuário e calcular a soma dos elementos. O print
-#exibe o resultado no terminal.
+#Após o resultado, será dado como final do programa.
 
-def resultado():
-    lista_numeros = obter_lista_numeros()
-    soma = calcular_soma(lista_numeros)
-    print(f"A soma dos números da lista é: {soma}")
-
-#A função resultado() é chamada, iniciando a execução do programa.
-
-resultado()
+print("Fim do programa!")

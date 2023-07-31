@@ -1,22 +1,24 @@
-#Crie um programa que solicite ao usuário duas listas de 
-#números inteiros e crie dois sets com essas listas. 
-#Em seguida, determine e exiba os números que estão 
-#presentes nos dois sets (interseção).
+#3. Crie um programa que solicite um número
+#ao usuário e determine se ele é positivo, 
+#negativo ou zero.
 
-def obter_lista_numeros_int():
-    numeros1 = input("Digite três números inteiros com espaço: ")
-    numeros2 = input("Digite três números inteiros com espaço: ")
-    lista1 = [int(numero) for numero in numeros1.split()]
-    lista2 = [int(numero) for numero in numeros2.split()]
-    return set(lista1), set(lista2)
+#Solicito que o usuário informe um número de sua escolha:
 
-def sets():
-    set1, set2 = obter_lista_numeros_int()
-    print(f"Lista 1 (Set 1): {set1}")
-    print(f"Lista 2 (Set 2): {set2}")
+numero = int(input("Digite um número: "))
 
-    intersecao = set1.intersection(set2)
-    print(f"Interseção: {intersecao}")
+#Faço o controle, se o número informado for maior que 0, o número é positivo. 
+#Se o número informado for menor que 0, o número é negativo. 
+#Fora destes padrões, o número é zero.
 
-sets()
+if numero > 0:
+    print(f"O {numero} é positivo!")
 
+elif numero < 0: 
+    print(f"O {numero} é negativo!")
+
+else: 
+    print("O numero é zero")
+
+#Após o resultado, é dado como final do programa.
+
+print("Fim do programa!")

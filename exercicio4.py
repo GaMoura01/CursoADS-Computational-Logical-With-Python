@@ -1,27 +1,23 @@
-#Escreva um programa que crie um dicionário com o nome e 
-#a idade de três pessoas. Em seguida, solicite ao usuário 
-#um nome e exiba a idade correspondente.
+#4. Escreva um programa que solicite 
+#um número ao usuário e determine se 
+#ele é divisível por 5.
 
-def obter_nome_idade(): 
-    cadastro = [
-        {"nome": "Gabriella", "idade": 19},        
-        {"nome": "Gabriele", "idade": 24},
-        {"nome": "Isabella", "idade": 24}
-    ]
-    return cadastro
+#Solicito que o usuário informe um número de sua escolha:
 
-def consultar_nome_idade():
-    cadastro = obter_nome_idade()
-    consulta = input("Digite um nome para consulta de idade no dicionário: ")
-    for pessoa in cadastro: 
-        if pessoa ["nome"] == consulta: 
-            return pessoa["idade"]
-    
-    return "Nome não encontrado. Digite um nome novamente."
+numero = int(input("Digite um número: "))
 
-def resultado():
-    idade = consultar_nome_idade()
-    print(f"A pessoa informada tem {idade} anos.")
+#Faço o controle, o operador % retorna o resto da divisão entre dois números. 
+#O código 'numero % 5 == 0' verfica se o resto da divisão do numero por 5 é igual a zero,
+#isso indica que o número é divisível por 5, e o resultado é exibido. 
+#Caso contrário, nada é exibido.
 
-resultado()
+if numero % 5 == 0:
+    print("O número é divisivel por 5. ")
+
+else: 
+    print("O número não é divisivel por 5. ")
+
+#Após o resultado, será dado como final do programa.
+
+print("Fim do programa!")
 
